@@ -1,33 +1,47 @@
 'use strict';
 import inquirer from 'inquirer';
+import path from 'path';
 import getDirectories from './getDirectories';
 
-export default function (srcpath, callback) {
+export default function (message = 'Please choose a folder', basePath = './', callback) {
+  var depth = 0;
+  var ui = new inquirer.ui.BottomBar();
 
-  prompt(srcpath);
 
-  function prompt(srcpath) {
-    var choices =  getDirectories(srcpath).concat([
-      new inquirer.Separator(),
-      'choose this folder',
-      new inquirer.Separator(),
-      '.. back'
-    ]);
+  prompt(basePath);
+
+  function prompt(srcPath) {
+    var choices =  getDirectories(srcPath);
+
+    if (choices.length > 0) {
+      choices.push(new inquirer.Separator());
+    }
+
+    choices.push('choose this folder');
+
+    if (depth > 0) {
+      choices.push(new inquirer.Separator());
+      choices.push('.. back');
+    }
 
     process.stdout.write('\u001B[2J\u001B[0;0f');
 
     inquirer.prompt([{
       type: 'list',
       name: 'path',
-      message: 'Where would you put it?',
+      message: function () {
+        return message + ` (current folder: ${srcPath})`;
+      },
       choices: choices
     }], function (answers) {
       if (answers.path === 'choose this folder') {
-        callback(srcpath);
+        callback(srcPath);
       } else if (answers.path === '.. back') {
-        prompt(path.dirname(srcpath));
+        depth--;
+        prompt(path.dirname(srcPath));
       } else {
-        prompt(path.join(srcpath, answers.path));
+        depth++;
+        prompt(path.join(srcPath, answers.path));
       }
     });
   }

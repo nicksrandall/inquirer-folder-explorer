@@ -4,6 +4,7 @@
   "description": "Folder explorer for command line",
   "main": "dist/index.js",
   "scripts": {
+    "demo": "node demo.js",
     "dev": "babel-node src/index.es6",
     "lint": "eslint src/**/*.es6",
     "compile": "babel --stage 0 -d dist/ src/",
