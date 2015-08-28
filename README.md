@@ -4,7 +4,7 @@ Allow users to choose a folder using your CLI tool.
 
 ## Why use this?
 
-Want to create an [npm](https://npmjs.com/) module with [ES6](http://es6rocks.com/)? Don't want to wait for full node support? Don't want to mess around with creating all those directories and setting up babel and npm scripts? Then this is for you.
+
 
 ## How to get started
 
