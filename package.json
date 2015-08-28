@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nicksrandall/nquirer-folder-explorer.git"
+    "url": "https://github.com/nicksrandall/inquirer-folder-explorer.git"
   },
   "keywords": [
     "inquirer",
