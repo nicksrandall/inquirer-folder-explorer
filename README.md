@@ -5,6 +5,7 @@
 Allow users to choose a folder using in CLI.
 
 ## Why use this?
+![Example][https://raw.githubusercontent.com/nicksrandall/nquirer-folder-explorer/master/demo/example.gif]
 
 ## How to get started
 
