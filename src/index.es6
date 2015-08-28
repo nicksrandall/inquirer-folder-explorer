@@ -5,8 +5,6 @@ import getDirectories from './getDirectories';
 
 export default function (message = 'Please choose a folder', basePath = './', callback) {
   var depth = 0;
-  var ui = new inquirer.ui.BottomBar();
-
 
   prompt(basePath);
 

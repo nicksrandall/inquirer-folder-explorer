@@ -5,19 +5,27 @@
 
 Allow users to choose a folder using in CLI.
 
-## Why use this?
 ![Example](https://raw.githubusercontent.com/nicksrandall/nquirer-folder-explorer/master/demo/example.gif)
 
-## How to get started
+## Why use this?
+I was building a CLI tool (using inquirer.js) and needed the user to be able to choose a folder to perform an action on.
 
-0. Install node and npm.
+## Example Usage
+```js
+var folderExplorer = require('inquirer-folder-explorer');
+
+folderExplorer('Please choose a folder', 'src', function (folder) {
+  console.log('you selected folder: ' +  folder);
+});
+```
 
 
 ## Modules used/included
 - *inquirer.js* - Command line prompts
 
-## Dev Modules used/included
+## Contributing
 
+### Dev Modules used/included
 - *babel* - compiles ES6 source to ES5. The `--experimental` flag is also enabled so you can use ES7 features.
 - *tape* and *argg* for simple, effective testing with less magic than mocha or jasmine.
 - *Istanbul* to report test coverage.
@@ -27,7 +35,7 @@ Allow users to choose a folder using in CLI.
 
 These are just defaults. Feel free to swap out eslint for jshint, or tape for mocha, or whatever you use for CI instead of coveralls.
 
-## Layout
+### Layout
 
 - `src/` - Your ES6 source code goes here. Files have a `.es6` extension for syntax highlighting in Sublime Text with [babel-sublime](https://github.com/babel/babel-sublime)
 - `src/tests/` - Your ES6 tests go here.
@@ -41,7 +49,7 @@ These are just defaults. Feel free to swap out eslint for jshint, or tape for mo
 - `.coveralls.yml` - Customize this if you use [coveralls](https://coveralls.io/) for code coverage.
 - `README.md` - Delete all this and write your own.
 
-## npm scripts
+### npm scripts
 
 These scripts are the main way to interact with your module as you develop it.
 
@@ -57,4 +65,4 @@ These scripts are the main way to interact with your module as you develop it.
 
 ## Questions?
 
-More info comming soon.
+More info coming soon.
