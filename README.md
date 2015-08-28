@@ -19,13 +19,18 @@ folderExplorer('Please choose a folder', 'src', function (folder) {
 });
 ```
 
+## API
+### folderExplorer(message, basePath, callback)
+This will prompts the user to choose a folder that is a child of the `basePath`. The callback will be called when user chooses a folder and the folder's path (relative to `basePath`) will be passed as the callback's only argument.
 
-## Modules used/included
-- *inquirer.js* - Command line prompts
+- *message* - {String} message to say to user (current path will automatically be appended)
+- *basePath* - {String} path (relative to current directory) to allow user to explore in
+- *callback* - {Function} called when user selects a folder. The folders path is passed as it's only argument.
 
 ## Contributing
 
 ### Dev Modules used/included
+- *inquirer.js* - Command line prompts
 - *babel* - compiles ES6 source to ES5. The `--experimental` flag is also enabled so you can use ES7 features.
 - *tape* and *argg* for simple, effective testing with less magic than mocha or jasmine.
 - *Istanbul* to report test coverage.
