@@ -1,19 +1,20 @@
-# nquirer-folder-explorer
+# inquirer-folder-explorer
 
-Allow users to choose a folder using your CLI tool.
+Allow users to choose a folder using in CLI.
 
 ## Why use this?
-
-
+[![Build Status](https://travis-ci.org/nicksrandall/nquirer-folder-explorer.svg?branch=master)](https://travis-ci.org/nicksrandall/nquirer-folder-explorer)
+[![Coverage Status](https://coveralls.io/repos/nicksrandall/nquirer-folder-explorer/badge.svg?branch=master&service=github)](https://coveralls.io/github/nicksrandall/nquirer-folder-explorer?branch=master)
 
 ## How to get started
 
 0. Install node and npm.
-1. Clone this repo: `git clone https://github.com/vinniegarcia/es6-module-starter.git my-module-name`
-2. Install dependencies: `npm i`
-3. Start hacking like it's 2015!
+
 
 ## Modules used/included
+- *inquirer.js* - Command line prompts
+
+## Dev Modules used/included
 
 - *babel* - compiles ES6 source to ES5. The `--experimental` flag is also enabled so you can use ES7 features.
 - *tape* and *argg* for simple, effective testing with less magic than mocha or jasmine.
@@ -54,4 +55,4 @@ These scripts are the main way to interact with your module as you develop it.
 
 ## Questions?
 
-File an [issue](https://github.com/vinniegarcia/es6-module-starter/issues) and I'll try to answer you.
+More info comming soon.
