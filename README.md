@@ -1,9 +1,6 @@
-# es6-module-starter
-[![npm version](https://badge.fury.io/js/es6-module-starter.svg)](http://badge.fury.io/js/es6-module-starter)
-[![travis build information](https://api.travis-ci.org/vinniegarcia/es6-module-starter.svg)](https://travis-ci.org/vinniegarcia/es6-module-starter)
-[![Coverage Status](https://coveralls.io/repos/vinniegarcia/es6-module-starter/badge.svg?branch=master)](https://coveralls.io/r/vinniegarcia/es6-module-starter?branch=master)
+# nquirer-folder-explorer
 
-Starter kit to create npm modules using ES6 and Babel with sensible defaults.
+Allow users to choose a folder using your CLI tool.
 
 ## Why use this?
 
@@ -41,7 +38,7 @@ These are just defaults. Feel free to swap out eslint for jshint, or tape for mo
 - `.coveralls.yml` - Customize this if you use [coveralls](https://coveralls.io/) for code coverage.
 - `README.md` - Delete all this and write your own.
 
-## npm scripts 
+## npm scripts
 
 These scripts are the main way to interact with your module as you develop it.
 
