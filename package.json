@@ -1,6 +1,6 @@
 {
   "name": "inquirer-folder-explorer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Folder explorer for command line",
   "main": "dist/index.js",
   "scripts": {
