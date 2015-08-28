@@ -1,10 +1,10 @@
 # inquirer-folder-explorer
+[![Build Status](https://travis-ci.org/nicksrandall/nquirer-folder-explorer.svg?branch=master)](https://travis-ci.org/nicksrandall/nquirer-folder-explorer)
+[![Coverage Status](https://coveralls.io/repos/nicksrandall/nquirer-folder-explorer/badge.svg?branch=master&service=github)](https://coveralls.io/github/nicksrandall/nquirer-folder-explorer?branch=master)
 
 Allow users to choose a folder using in CLI.
 
 ## Why use this?
-[![Build Status](https://travis-ci.org/nicksrandall/nquirer-folder-explorer.svg?branch=master)](https://travis-ci.org/nicksrandall/nquirer-folder-explorer)
-[![Coverage Status](https://coveralls.io/repos/nicksrandall/nquirer-folder-explorer/badge.svg?branch=master&service=github)](https://coveralls.io/github/nicksrandall/nquirer-folder-explorer?branch=master)
 
 ## How to get started
 
