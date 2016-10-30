@@ -14,10 +14,16 @@ I was building a CLI tool (using inquirer.js) and needed the user to be able to 
 ```js
 var folderExplorer = require('inquirer-folder-explorer');
 
-folderExplorer('Please choose a folder', 'src', function (folder) {
+folderExplorer('Please choose a folder', './').then((folder) => {
   console.log('you selected folder: ' +  folder);
+}).catch((err) => {
+  console.error('some error')
 });
 ```
+
+## Update
+
+Updated in Oct 2016 to work with Inquirer 1.0 and above, using promises and can be thus also be used with async/await :)
 
 ## API
 ### folderExplorer(message, basePath, callback)
