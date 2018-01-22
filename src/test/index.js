@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-import test from 'tape';
-import fn from '../index';
+const test = require('tape');
+const fn = require('../index');
 
 // tests coming soon
 test('Assert object values', (t) => {

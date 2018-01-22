@@ -1,9 +1,9 @@
 'use strict';
-import inquirer from 'inquirer';
-import path from 'path';
-import getDirectories from './getDirectories';
+var inquirer = require('inquirer');
+var path = require('path');
+var getDirectories = require('./getDirectories');
 
-export default function (message = 'Please choose a folder', basePath = './', callback) {
+module.exports = function (message = 'Please choose a folder', basePath = './', callback) {
   var depth = 0;
 
   prompt(basePath);
@@ -43,5 +43,4 @@ export default function (message = 'Please choose a folder', basePath = './', ca
       }
     });
   }
-
 };

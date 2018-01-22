@@ -1,5 +1,4 @@
-src/
-dist/test/
+src/test/
 coverage/
 .coveralls.yml
 .travis.yml
