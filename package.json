@@ -33,6 +33,6 @@
     "tape": "^4.2.0"
   },
   "dependencies": {
-    "inquirer": "^0.9.0"
+    "inquirer": "^5.0.1"
   }
 }

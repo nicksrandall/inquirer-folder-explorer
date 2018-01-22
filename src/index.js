@@ -5,6 +5,7 @@ var getDirectories = require('./getDirectories');
 
 module.exports = function (message = 'Please choose a folder', basePath = './', callback) {
   var depth = 0;
+  var initialDraw = true;
 
   prompt(basePath);
 
@@ -15,14 +16,24 @@ module.exports = function (message = 'Please choose a folder', basePath = './', 
       choices.push(new inquirer.Separator());
     }
 
-    choices.push('choose this folder');
+    choices.push({
+      name: 'choose this folder',
+      value: srcPath,
+      short: path.relative(basePath, srcPath)
+    });
 
     if (depth > 0) {
       choices.push(new inquirer.Separator());
       choices.push('.. back');
     }
 
-    process.stdout.write('\u001B[2J\u001B[0;0f');
+    if (initialDraw === false) {
+      process.stdout.moveCursor(0, -1);
+    } else {
+      initialDraw = false;
+    }
+    process.stdout.clearLine();
+    process.stdout.cursorTo(0);
 
     inquirer.prompt([{
       type: 'list',
@@ -31,8 +42,8 @@ module.exports = function (message = 'Please choose a folder', basePath = './', 
         return message + ` (current folder: ${srcPath})`;
       },
       choices: choices
-    }], function (answers) {
-      if (answers.path === 'choose this folder') {
+    }]).then(function (answers) {
+      if (answers.path === srcPath) {
         callback(null, srcPath);
       } else if (answers.path === '.. back') {
         depth--;
