@@ -33,7 +33,7 @@ export default function (message = 'Please choose a folder', basePath = './', ca
       choices: choices
     }], function (answers) {
       if (answers.path === 'choose this folder') {
-        callback(srcPath);
+        callback(null, srcPath);
       } else if (answers.path === '.. back') {
         depth--;
         prompt(path.dirname(srcPath));
