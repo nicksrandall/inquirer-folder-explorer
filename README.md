@@ -14,18 +14,27 @@ I was building a CLI tool (using inquirer.js) and needed the user to be able to 
 ```js
 var folderExplorer = require('inquirer-folder-explorer');
 
-folderExplorer('Please choose a folder', 'src', function (folder) {
+folderExplorer('Please choose a folder', 'src', function (err, folder) {
   console.log('you selected folder: ' +  folder);
 });
 ```
 
 ## API
 ### folderExplorer(message, basePath, callback)
-This will prompts the user to choose a folder that is a child of the `basePath`. The callback will be called when user chooses a folder and the folder's path (relative to `basePath`) will be passed as the callback's only argument.
+This will prompts the user to choose a folder that is a child of the `basePath`. The callback will be called when user chooses a folder and the folder's path (relative to `basePath`) will be passed as the callback's second argument.
 
 - *message* - {String} message to say to user (current path will automatically be appended)
 - *basePath* - {String} path (relative to current directory) to allow user to explore in
-- *callback* - {Function} called when user selects a folder. The folders path is passed as it's only argument.
+- *callback* - {Function} called when user selects a folder. The folders path is passed as its second argument.
+
+Use [`util.promisify()`](https://nodejs.org/api/util.html#util_util_promisify_original) to work with a Promise based API.
+```js
+var util = require('util');
+util.promisify(folderExplorer)(message, basePath)
+  .then(function (folder) {
+    console.log('you selected folder: ' +  folder);
+  });
+```
 
 ## Contributing
 
